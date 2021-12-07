@@ -1,0 +1,17 @@
+<%- include("../partials/header") %>
+    <div class = "container">
+        <% if(project){ %>
+            <div class="card" style="width: 60rem; display: inline-block;">
+                <div class="card-body">
+                    <h2 class="card-title">Project ID: <%=project['p_id']%></h2>
+                    <h4 class="card-title">Project Name: <%=project['p_name']%></h4>
+                    <h4 class="card-title">Department ID: <%=project['dept_id']%></h4>
+                    <h4 class="card-title">Description: <%=project['p_desc']%></h4>
+                    <h4 class="card-title">Incremental Salary: INR <%=project['p_incremental_sal']%></h4>
+                    </div>
+            </div>
+        <%}else{%>
+            <h1>No project with this ID</h1>
+        <%}%>
+    </div>
+<%- include("../partials/footer") %>

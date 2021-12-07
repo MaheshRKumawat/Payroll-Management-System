@@ -1,0 +1,26 @@
+<%- include("../partials/header") %>
+    <div class = "container">
+        <% if(department){ %>
+            <div class="card" style="width: 60rem; display: inline-block;">
+                <div class="card-body">
+                    <h2 class="card-title">Department ID: <%=department['dept_id']%></h2>
+                    <h4 class="card-title">Department Name: <%=department['dept_name']%></h4>
+                    <h4 class="card-title">Manager ID: <%=department['mgr_id']%></h4>
+                    <h4 class="card-title">Manager Start Date: <%=department['mgr_start_date']%></h4>
+                    <h4 class="card-title">Base Salary: INR <%=department['base_sal']%></h4>
+                    <h4 class="card-title">Number of Employees: <%=department['number_of_emp']%></h4>
+                    <h4 class="card-title">Current Projects:</h4>
+                    <% if(projects){ %>
+                        <% projects.forEach(project=>{ %>
+                            <a href="/projects/<%=project['p_id']%>" type="button" class="btn btn-outline-primary">Project ID: <%=project['p_id']%></a>
+                        <%});%>
+                    <%}else{%>
+                        <h3 class="card-title">None</h3>
+                    <%}%>
+                </div>
+            </div>
+        <%}else{%>
+            <h1>No department with this ID</h1>
+        <%}%>
+    </div>
+<%- include("../partials/footer") %>
