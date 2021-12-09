@@ -6,11 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Document</title>
+    <style>
+        #upper_left {
+            position: absolute;
+            top: 5em;
+            left: 0;
+        }
+        #upper_right {
+            position: absolute;
+            top: 4em;
+            right: 0;
+        }
+        #lower_left {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        #lower_right {
+            bottom: 0;
+            right: 0;
+            position: absolute;
+        }
+        .zoom {
+            transition: transform .2s;
+            margin: 0 auto;
+        }
+
+        .zoom:hover {
+            transform: scale(1.08);
+            color: white;
+            background-color: #343a40;
+        }
+
+        .block {
+            transition: transform .2s;
+        }
+
+        .block:hover {
+            transform: scale(1.10);
+            
+        }
+
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">PAYROLL MANAGEMENT SYSTEM</a>
+            <a class="navbar-brand" style="font-size: x-large;" href="/">Payroll Management System</a>
         </div>
     </nav>
+    
     

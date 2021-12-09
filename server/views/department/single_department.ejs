@@ -1,9 +1,10 @@
 <%- include("../partials/header") %>
-    <div class = "container">
+    <div class = "container d-grid gap-2 col-8 mx-auto">
+        <br>
         <% if(department){ %>
             <div class="card" style="width: 60rem; display: inline-block;">
+                <div class="card-header" style="font-size:xx-large; color: white; background-color: #636d75;">Department ID: <%=department['dept_id']%></div>
                 <div class="card-body">
-                    <h2 class="card-title">Department ID: <%=department['dept_id']%></h2>
                     <h4 class="card-title">Department Name: <%=department['dept_name']%></h4>
                     <h4 class="card-title">Manager ID: <%=department['mgr_id']%></h4>
                     <h4 class="card-title">Manager Start Date: <%=department['mgr_start_date']%></h4>

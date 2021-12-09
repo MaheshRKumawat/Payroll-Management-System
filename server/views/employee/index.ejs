@@ -1,10 +1,17 @@
 <%- include("../partials/header") %>
-    <div class = "container">
+    <div class = "container d-grid gap-2 col-10 mx-auto">
+        <br>
+        <div class="d-grid gap-3 col-3 mx-auto">
+            <a href="/employees/new" type="button" class="btn btn-lg btn-outline-primary">Add new Employee</a>
+        </div>
+        <br>
+        <br>
         <% if(data){ %>
             <% data.forEach(employee=>{ %>
-                <div class="card" style="width: 18rem; display: inline-block;">
+                <div class="card block border-secondary" style="margin:0.5em; width: 18rem; display: inline-block;">
+                    <div class="card-header" style="font-size:large; color: white; background-color: #636d75;">Employee ID: <%=employee['emp_id']%></div>
                     <div class="card-body">
-                        <h5 class="card-title">Employee ID: <%=employee['emp_id']%></h5>
+                        
                         <p class="card-text">Name: <%=employee['first_name'] +" "+ employee['middle_name'] +" "+employee['last_name']%></p>
                         
                         <a href="/employees/<%=employee['emp_id']%>" type="button" class="btn btn-outline-primary">View Details</a>
